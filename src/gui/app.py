@@ -136,7 +136,8 @@ class App(ctk.CTk):
             self.after(0, lambda: self._on_transcription_complete(segments))
 
         except Exception as e:
-            self.after(0, lambda: self._on_transcription_error(str(e)))
+            error_msg = str(e)
+            self.after(0, lambda: self._on_transcription_error(error_msg))
 
     def _on_transcription_complete(self, segments):
         """文字起こし完了時の処理"""
