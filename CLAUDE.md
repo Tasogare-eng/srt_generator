@@ -56,6 +56,34 @@
 - ffmpeg-python
 - FFmpeg (システムインストール: `brew install ffmpeg`)
 
+## 初回セットアップ
+
+### SSL証明書のインストール（Python 3.13必須）
+
+Whisperモデルのダウンロード時にSSLエラーが発生する場合、以下を実行：
+
+```bash
+/Applications/Python\ 3.13/Install\ Certificates.command
+```
+
+または：
+
+```bash
+/Library/Frameworks/Python.framework/Versions/3.13/bin/pip install --upgrade certifi
+```
+
+### Whisperモデルのダウンロード
+
+初回実行時にモデルが自動ダウンロードされる（`~/.cache/whisper/`に保存）
+
+| モデル | サイズ |
+|--------|--------|
+| tiny | ~75 MB |
+| base | ~145 MB |
+| small | ~466 MB |
+| medium | ~1.5 GB |
+| large | ~3 GB |
+
 ## リポジトリ
 
 - **URL**: https://github.com/Tasogare-eng/srt_generator
